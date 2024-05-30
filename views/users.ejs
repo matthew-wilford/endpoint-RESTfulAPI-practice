@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="col-6"> 
+    <h1>Users Table</h1>
+    <h5>Add a user in contact us</h5>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% allUsers.forEach(user=> { %>
+          <tr>
+            <td>
+              <a href="<%=`/users/${user._id}`%>">
+                <%= user.name %>
+              </a>
+            </td>
+            <td>
+              <%= user.gender %>
+            </td>
+          </tr>
+          <% }); %>
+      </tbody>
+    </table>
+  </div>
+</div>
